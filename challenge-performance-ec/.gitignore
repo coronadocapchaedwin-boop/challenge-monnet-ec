@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.qa
+!.env.uat
+.DS_Store
+.tools/
+node_modules/
+reports/*
+!reports/.gitkeep
+results/

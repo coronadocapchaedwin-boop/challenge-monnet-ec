@@ -1,0 +1,31 @@
+{
+  "name": "challenge-automation-ec",
+  "version": "1.0.0",
+  "private": true,
+  "engines": { "node": ">=22" },
+  "description": "API and Web automation challenge with Playwright and TypeScript",
+  "scripts": {
+    "test": "playwright test",
+    "test:qa": "TEST_ENV=qa playwright test",
+    "test:cert": "TEST_ENV=cert playwright test",
+    "test:api": "playwright test --project=api",
+    "test:api:qa": "TEST_ENV=qa playwright test --project=api",
+    "test:api:cert": "TEST_ENV=cert playwright test --project=api",
+    "test:web": "playwright test --project=web-chromium",
+    "test:web:qa": "TEST_ENV=qa playwright test --project=web-chromium",
+    "test:web:cert": "TEST_ENV=cert playwright test --project=web-chromium",
+    "report": "playwright show-report playwright-report/qa",
+    "report:cert": "playwright show-report playwright-report/cert",
+    "check:env": "node scripts/check-env.cjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@e965/xlsx": "^0.20.3",
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.0",
+    "typescript": "^5.9.3"
+  }
+}

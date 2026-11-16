@@ -1,0 +1,14 @@
+{
+  "name": "challenge-performance-ec",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/run-all.js",
+    "test:product": "node scripts/run.js tests/products/create-product.test.js",
+    "report": "node scripts/executive-report.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}
